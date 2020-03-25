@@ -11,7 +11,6 @@ namespace ClassLibrary
         private String name;
         private int? level;
 
-        [Required]
         [StringLength(20, MinimumLength = 5)]
         public String Name
         {
