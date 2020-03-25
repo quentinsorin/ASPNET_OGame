@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class SolarSystem :IDbEntity
+    public class SolarSystem :IDbEntity
     {
-        private String name;
-        private List<Planet> planets;
+        private string Name { get; set; }
+        private List<Planet> planets { get; set; } = new List<Planet>();
     }
 }

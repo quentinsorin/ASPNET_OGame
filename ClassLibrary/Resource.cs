@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class Resource : IDbEntity
+    public class Resource : IDbEntity
     {
-        private String name;
-        private int? lastQuantity;
-        private DateTime lastUpdate;
+        private string name { get; set; }
+        private int? lastQuantity { get; set; }
+        private DateTime lastUpdate { get; set; }
 
     }
 }

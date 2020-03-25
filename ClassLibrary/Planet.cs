@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class Planet : IDbEntity
+    public class Planet : IDbEntity
     {
-        private String name;
-        private int? caseNb;
+        private String name { get; set; }
+        private int? caseNb { get; set; }
 
-        private List<Resource> resources;
-        private List<Building> buildings;
+        private List<Resource> resources { get; set; } = new List<Resource>();
+        private List<Building> buildings { get; set; } = new List<Building>();
     }
 }
