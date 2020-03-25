@@ -6,20 +6,32 @@ namespace ClassLibrary
 {
     public class Building : IDbEntity
     {
+        private long? id;
+        private String name;
+        private int? level;
+
         [Required]
         [StringLength(20, MinimumLength = 5)]
-        private string Name { get; set; }
+        public String Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
 
-        [Range(0, Double.PositiveInfinity)]
-        private int Level { get; set; }
+        [Range(0, int.MaxValue)]
+        public virtual int? Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
 
         //Représente le nombre de case nécessaire au bâtiment pour exister
         public int CellNb()
         {
             int res = 0;
-            if(res < 0)
+            if(level > 0 & level != null)
             {
-                res = 0;
+                res = (int) level;
             }
             return res;
         }
