@@ -27,7 +27,7 @@ namespace ClassLibrary
             set { name = value; }
         }
 
-        [IntegerValidator(MinValue = 0, MaxValue = int.MaxValue)]
+        [Range( 0, int.MaxValue)]
         public int? CaseNb
         {
             get { return caseNb; }

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ClassLibrary
 {
-    public class Building : IDbEntity
+    public abstract class Building : IDbEntity
     {
         private long? id;
         private String name;
@@ -26,28 +27,29 @@ namespace ClassLibrary
         }
 
         //Représente le nombre de case nécessaire au bâtiment pour exister
-        public int CellNb()
+        [NotMapped]
+        [Range(0, int.MaxValue)]
+        public virtual int? CellNb
         {
-            int res = 0;
-            if(level > 0 & level != null)
-            {
-                res = (int) level;
-            }
-            return res;
+            get { return level; }
         }
 
         //retourne la liste des ressources totale ayant permit la construction du bâtiment.
         //Attention un bâtiment peut ne pas avoir coûté d’énergie et ou d’oxygène et ou d’acier et ou d’uranium.
-        public List<Resource> TotalCost()
+        [NotMapped]
+        public virtual List<Resource> TotalCost
         {
-            return new List<Resource>();
+            get { return new List<Resource>(); }
         }
 
         //retourne la liste des ressources permettant la construction du prochain niveau du bâtiment.
         //Attention un bâtiment peut ne pas avoir de coût en énergie et ou oxygène et ou acier et ou uranium.
-        public List<Resource> NextCost()
+        [NotMapped]
+        public virtual List<Resource> NextCost
         {
-            return new List<Resource>();
+            get { return new List<Resource>(); }
         }
+
+        public virtual long? Id { get => this.id; set => this.id = value; }
     }
 }

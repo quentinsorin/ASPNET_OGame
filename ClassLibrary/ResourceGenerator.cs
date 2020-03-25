@@ -7,15 +7,21 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class ResourceGenerator : Building
+    public abstract class ResourceGenerator : Building
     {
-        [NotMapped]
-        private List<Resource> resourceBySecond = new List<Resource>();
+        
+        private List<Resource> resourceBySecond;
 
+        [NotMapped]
         public virtual List<Resource> ResourceBySecond
         {
             get { return resourceBySecond; }
             set { resourceBySecond = value; }
+        }
+
+        public ResourceGenerator()
+        {
+            this.resourceBySecond = new List<Resource>();
         }
     }
 }

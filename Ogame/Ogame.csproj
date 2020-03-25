@@ -134,14 +134,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003251041553_ogame.cs" />
-    <Compile Include="Migrations\202003251041553_ogame.Designer.cs">
-      <DependentUpon>202003251041553_ogame.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003251122300_ogame2.cs" />
-    <Compile Include="Migrations\202003251122300_ogame2.Designer.cs">
-      <DependentUpon>202003251122300_ogame2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -219,14 +211,6 @@
       <Project>{2ac477c3-0bb1-4a89-8957-41b5f53289b8}</Project>
       <Name>ClassLibrary</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003251041553_ogame.resx">
-      <DependentUpon>202003251041553_ogame.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003251122300_ogame2.resx">
-      <DependentUpon>202003251122300_ogame2.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

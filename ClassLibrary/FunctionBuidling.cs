@@ -7,16 +7,23 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class FunctionBuidling : Building
-<<<<<<< HEAD
-
-=======
->>>>>>> 98d1c0a2188d80bcf42a96671d9f156557e7ca73
+    public abstract class FunctionBuidling : Building
     {
+       
+        private List<Action> actions;
+       
         [NotMapped]
-        public List<Action> Actions()
+        public virtual List<Action> Actions
         {
-            return new List<Action>();
+            get { return actions; }
+            set { actions = value; }
         }
+
+
+        public FunctionBuidling()
+        {
+            this.actions = new List<Action>();
+        }
+      
     }
 }
