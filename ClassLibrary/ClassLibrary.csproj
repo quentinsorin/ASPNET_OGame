@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,6 +51,8 @@
     <Compile Include="Resource.cs" />
     <Compile Include="ResourceGenerator.cs" />
     <Compile Include="SolarSystem.cs" />
+    <Compile Include="Validator\ValidatorDateTime.cs" />
+    <Compile Include="Validator\ValidatorPlanetResource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

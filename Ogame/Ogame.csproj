@@ -126,11 +126,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BuildingsController.cs" />
-    <Compile Include="Controllers\FunctionBuildingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlanetsController.cs" />
-    <Compile Include="Controllers\ResourceGeneratorsController.cs" />
     <Compile Include="Controllers\ResourcesController.cs" />
     <Compile Include="Controllers\SolarSystemsController.cs" />
     <Compile Include="Data\OgameContext.cs" />
@@ -140,6 +137,10 @@
     <Compile Include="Migrations\202003251041553_ogame.cs" />
     <Compile Include="Migrations\202003251041553_ogame.Designer.cs">
       <DependentUpon>202003251041553_ogame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003251122300_ogame2.cs" />
+    <Compile Include="Migrations\202003251122300_ogame2.Designer.cs">
+      <DependentUpon>202003251122300_ogame2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,21 +196,6 @@
     <Content Include="Views\SolarSystems\Details.cshtml" />
     <Content Include="Views\SolarSystems\Edit.cshtml" />
     <Content Include="Views\SolarSystems\Index.cshtml" />
-    <Content Include="Views\Buildings\Create.cshtml" />
-    <Content Include="Views\Buildings\Delete.cshtml" />
-    <Content Include="Views\Buildings\Details.cshtml" />
-    <Content Include="Views\Buildings\Edit.cshtml" />
-    <Content Include="Views\Buildings\Index.cshtml" />
-    <Content Include="Views\FunctionBuildings\Create.cshtml" />
-    <Content Include="Views\FunctionBuildings\Delete.cshtml" />
-    <Content Include="Views\FunctionBuildings\Details.cshtml" />
-    <Content Include="Views\FunctionBuildings\Edit.cshtml" />
-    <Content Include="Views\FunctionBuildings\Index.cshtml" />
-    <Content Include="Views\ResourceGenerators\Create.cshtml" />
-    <Content Include="Views\ResourceGenerators\Delete.cshtml" />
-    <Content Include="Views\ResourceGenerators\Details.cshtml" />
-    <Content Include="Views\ResourceGenerators\Edit.cshtml" />
-    <Content Include="Views\ResourceGenerators\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +223,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003251041553_ogame.resx">
       <DependentUpon>202003251041553_ogame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003251122300_ogame2.resx">
+      <DependentUpon>202003251122300_ogame2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
