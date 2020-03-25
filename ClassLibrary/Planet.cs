@@ -8,10 +8,10 @@ namespace ClassLibrary
 {
     public class Planet : IDbEntity
     {
-        private String name { get; set; }
-        private int? caseNb { get; set; }
+        private String Name { get; set; }
+        private int? CaseNb { get; set; }
 
-        private List<Resource> resources { get; set; } = new List<Resource>();
-        private List<Building> buildings { get; set; } = new List<Building>();
+        private List<Resource> Resources { get; set; } = new List<Resource>();
+        private List<Building> Buildings { get; set; } = new List<Building>();
     }
 }

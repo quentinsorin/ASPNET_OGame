@@ -8,9 +8,9 @@ namespace ClassLibrary
 {
     public class Resource : IDbEntity
     {
-        private string name { get; set; }
-        private int? lastQuantity { get; set; }
-        private DateTime lastUpdate { get; set; }
+        private string Name { get; set; }
+        private int? LastQuantity { get; set; }
+        private DateTime LastUpdate { get; set; }
 
     }
 }
