@@ -4,8 +4,8 @@ namespace ClassLibrary
 {
     class Building : IDbEntity
     {
-        private string name { get; set; }
-        private int level { get; set; }
+        private string Name { get; set; }
+        private int Level { get; set; }
 
         public int CellNb { get; set; }
         public List<Resource> TotalCost()

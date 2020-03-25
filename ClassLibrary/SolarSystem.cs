@@ -9,6 +9,6 @@ namespace ClassLibrary
     public class SolarSystem :IDbEntity
     {
         private string Name { get; set; }
-        private List<Planet> planets { get; set; } = new List<Planet>();
+        private List<Planet> Planets { get; set; } = new List<Planet>();
     }
 }
