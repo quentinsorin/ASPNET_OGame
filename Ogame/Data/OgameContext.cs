@@ -24,9 +24,8 @@ namespace Ogame.Data
         public System.Data.Entity.DbSet<ClassLibrary.Resource> Resources { get; set; }
 
         public System.Data.Entity.DbSet<ClassLibrary.SolarSystem> SolarSystems { get; set; }
-        public System.Data.Entity.DbSet<ClassLibrary.Building> Buildings { get; set; }
+        public DbSet<ClassLibrary.Building> Buildings { get; set; }
         public System.Data.Entity.DbSet<ClassLibrary.ResourceGenerator> ResourceGenerators { get; set; }
-        public System.Data.Entity.DbSet<ClassLibrary.FunctionBuidling> FunctionBuidlings { get; set; }
 
         public System.Data.Entity.DbSet<ClassLibrary.FunctionBuilding> FunctionBuildings { get; set; }
     }
