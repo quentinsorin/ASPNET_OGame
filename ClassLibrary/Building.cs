@@ -2,7 +2,7 @@
 
 namespace ClassLibrary
 {
-    class Building : IDbEntity
+    public class Building : IDbEntity
     {
         private string Name { get; set; }
         private int Level { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class FunctionBuilding : Building
+    public class FunctionBuidling : Building
     {
         public List<Action> Actions()
         {

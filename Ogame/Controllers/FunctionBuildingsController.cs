@@ -18,7 +18,7 @@ namespace Ogame.Controllers
         // GET: FunctionBuildings
         public ActionResult Index()
         {
-            return View(db.FunctionBuildings.ToList());
+            return View(db.FunctionBuidlings.ToList());
         }
 
         // GET: FunctionBuildings/Details/5
@@ -28,7 +28,7 @@ namespace Ogame.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FunctionBuilding functionBuilding = db.FunctionBuildings.Find(id);
+            FunctionBuidling functionBuilding = db.FunctionBuidlings.Find(id);
             if (functionBuilding == null)
             {
                 return HttpNotFound();
@@ -47,11 +47,11 @@ namespace Ogame.Controllers
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id")] FunctionBuilding functionBuilding)
+        public ActionResult Create([Bind(Include = "Id")] FunctionBuidling functionBuilding)
         {
             if (ModelState.IsValid)
             {
-                db.FunctionBuildings.Add(functionBuilding);
+                db.FunctionBuidlings.Add(functionBuilding);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace Ogame.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FunctionBuilding functionBuilding = db.FunctionBuildings.Find(id);
+            FunctionBuidling functionBuilding = db.FunctionBuidlings.Find(id);
             if (functionBuilding == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace Ogame.Controllers
         // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id")] FunctionBuilding functionBuilding)
+        public ActionResult Edit([Bind(Include = "Id")] FunctionBuidling functionBuilding)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace Ogame.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FunctionBuilding functionBuilding = db.FunctionBuildings.Find(id);
+            FunctionBuidling functionBuilding = db.FunctionBuidlings.Find(id);
             if (functionBuilding == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace Ogame.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            FunctionBuilding functionBuilding = db.FunctionBuildings.Find(id);
-            db.FunctionBuildings.Remove(functionBuilding);
+            FunctionBuidling functionBuilding = db.FunctionBuidlings.Find(id);
+            db.FunctionBuidlings.Remove(functionBuilding);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

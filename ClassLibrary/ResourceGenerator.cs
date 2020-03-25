@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    class ResourceGenerator : Building
+    public class ResourceGenerator : Building
     {
         public int ResourceBySecond { get; set; }
     }
