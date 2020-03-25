@@ -6,12 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ClassLibrary
-{
+{ 
     public abstract class FunctionBuidling : Building
     {
-       
         private List<Action> actions;
-       
+  
         [NotMapped]
         public virtual List<Action> Actions
         {
@@ -19,11 +18,10 @@ namespace ClassLibrary
             set { actions = value; }
         }
 
-
         public FunctionBuidling()
         {
             this.actions = new List<Action>();
         }
-      
+        
     }
 }
